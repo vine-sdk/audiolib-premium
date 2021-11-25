@@ -1,13 +1,33 @@
 # audiolib 프리미엄 에디션
 VINE Audio Processing Library Premium Edition
 
-Standard 버전의 AGC (Automaic Gain Control)기능 외 송/수신에 필요한 여러 오디오 알고리즘을 제공하는 유료 프리미엄버전입니다.
+audiolib Standard 버전의 AGC (Automaic Gain Control)기능 외 송/수신에 필요한 여러 오디오 알고리즘을 제공하는 유상 판매버전입니다.
 
-추가 제공기능: (T.B.D.)
+프리미엄 에디션 라이선스 구매문의: support@thevinecorp.com
+<br/>
+<br/>
 
+### 추가 제공기능
++ ANR (Adaptive Noise Reduction)
++ Howling Detection
++ Speaker DRC (Rx)
++ Ear-shock Protection (Rx)
++ Notch Filter (Rx)
++ (T.B.D.)
+<br/>
+<br/>
 
+## AGC
 AGC는 Mic와 화자 간 거리에 따라 자동으로 송신음량을 최적화하는 기능입니다.
 Audio PCM buffer interface가 제공되는 환경이면 본 프로젝트를 통해 AGC를 Intel x86/x64, ARM64, ARM32기반 등 다양한 플랫폼에 적용 가능합니다.
+AGC는 Mic와 화자 간 거리에 따라 자동으로 송신음량을 최적화하는 기능입니다.
+
+![AGC_IN_OUT](https://user-images.githubusercontent.com/75764437/142515569-30c9f4c5-b1ca-4668-93c7-e43e07bab56c.png)
+
+마이크와 화자간의 거리가 멀어지면 음성신호의 크기가 줄어들어서 상대편에 작게 전달될 수가 있습니다.
+AGC 기술을 통해 자동으로 적절한 음량으로 gain을 증가또는 감소시켜 전달 가능합니다. 이는 반대의 상황(마이크와 화자의 거리가 가까워져서 소리가 커지는 경우)에도 마찬가지로 적용됩니다.
+<br/>
+<br/>
 
 
 # Library 적용 가이드
@@ -29,6 +49,15 @@ AGC 는 초기화, 프로세싱 함수(8K, 16K)로 구성되어 있으며 별도
 	- AGC (Auto Gain Control): 통화중 송신음 음량 최적화
 
 <br/>   
+<br/>
+<br/>
+
+
+## AGC 실행 예제 프로젝트
+
+아래 예제 프로젝트 페이지를 참조하시기 바랍니다.<br/>
+https://github.com/vine-sdk/examples
+<br/>
 <br/>
 <br/>
 
@@ -75,3 +104,14 @@ AGC 는 초기화, 프로세싱 함수(8K, 16K)로 구성되어 있으며 별도
   }
 ```
 <br/>
+<br/>
+
+# License
+
+[![License: LGPL v2.1](https://img.shields.io/badge/License-LGPL_v2.1-blue.svg)](https://www.gnu.org/licenses/lgpl-2.1)
+
+<br/>
+<br/>
+
+# Copyright
+Copyright (c) 2021, THE VINE CORPORATION All right reserved.
